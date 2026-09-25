@@ -1,24 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import Karyawan from "./pages/Karyawan";
-import CreateKaryawan from "./pages/CreateKaryawan";
-import DetailKaryawan from "./pages/DetailKaryawan";
-import EditKaryawan from "./pages/EditKaryawan";
-import LaporanKaryawan from "./pages/LaporanKaryawan";
+import CreateLoan from "./pages/CreateLoan";
+import EditLoan from "./pages/EditLoan";
 
 const App = () => {
   return(
       <BrowserRouter>
-      <Navbar />
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/karyawan" element={<Home />}/>
-        <Route path="/karyawan" element={<Karyawan />}/>
-        <Route path="/karyawan/create" element={<CreateKaryawan />}/>
-        <Route path="/karyawan/edit/:id" element={<EditKaryawan />}/>
-        <Route path="/karyawan/:id/" element={<DetailKaryawan />}/>
-        <Route path="/karyawan/laporan" element={<LaporanKaryawan />} />
+        <Route path="/peminjaman" element={<Home />}/>
+        <Route path="/peminjaman/create" element={<CreateLoan />}/>
+        <Route path="/peminjaman/edit/:id" element={<EditLoan />}/>
         </Routes>
       </BrowserRouter>
   );

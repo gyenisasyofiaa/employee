@@ -1,63 +1,34 @@
-### Mendapatkan semua data produk (GET)
-GET http://localhost:5000/products
+### Mendapatkan semua data peminjaman (GET)
+GET http://localhost:5000/peminjaman
 
-### Mendapatkan data produk berdasarkan ID (GET)
-GET http://localhost:5000/products/1
+### Mendapatkan data peminjaman berdasarkan ID (GET)
+GET http://localhost:5000/peminjaman/1
 
-### Menambahkan produk baru (POST)
-POST http://localhost:5000/products
+### Menambahkan data peminjaman baru (POST)
+POST http://localhost:5000/peminjaman
 Content-Type: application/json
 
 {
-  "productnam": "Keyboard",
-  "category": "Device Computer",
-  "price": 90000,
-  "stock": 15
+  "nama_peminjam": "Ahmad Fauzi",
+  "judul_buku": "Pemrograman Web dengan React",
+  "kategori": "Teknologi",
+  "tanggal_pinjam": "2026-09-24",
+  "tanggal_kembali": "2026-10-01",
+  "status": "Dipinjam"
 }
 
-### Memperbarui data produk (PATCH)
-PATCH http://localhost:5000/products/1
+### Memperbarui data peminjaman (PATCH)
+PATCH http://localhost:5000/peminjaman/1
 Content-Type: application/json
 
 {
-  "productname": "Speaker Active 1500 Watt",
-  "category": "Device Computer",
-  "price": 750000,
-  "stock": 3
+  "nama_peminjam": "Ahmad Fauzi",
+  "judul_buku": "Pemrograman Web dengan React",
+  "kategori": "Teknologi",
+  "tanggal_pinjam": "2026-09-24",
+  "tanggal_kembali": "2026-10-01",
+  "status": "Dikembalikan"
 }
 
-### Menghapus data produk (DELETE)
-DELETE http://localhost:5000/products/1
-
-//=====================================//
-
-### Mendapatkan semua data karyawan (GET)
-GET http://localhost:5000/karyawan
-
-### Mendapatkan data karyawan berdasarkan ID (GET)
-GET http://localhost:5000/karyawan/1
-
-### Menambahkan data karyawan baru (POST)
-POST http://localhost:5000/karyawan
-Content-Type: application/json
-
-{
-  "namakary": "Budi Santoso",
-  "jeniskelamin": "Laki-laki",
-  "jabatan": "Software Engineer",
-  "pendidikan": "S1 Informatika"
-}
-
-### Memperbarui data karyawan (PATCH)
-PATCH http://localhost:5000/karyawan/1
-Content-Type: application/json
-
-{
-  "namakary": "Budi Santoso Updated",
-  "jeniskelamin": "Laki-laki",
-  "jabatan": "Senior Developer",
-  "pendidikan": "S1 Informatika"
-}
-
-### Menghapus data karyawan (DELETE)
-DELETE http://localhost:5000/karyawan/1
+### Menghapus data peminjaman (DELETE)
+DELETE http://localhost:5000/peminjaman/1
